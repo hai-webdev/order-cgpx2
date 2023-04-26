@@ -1,0 +1,82 @@
+@import "~@/assets/global.less";
+
+// .footer-container{
+//   padding-top: 84px;
+//   padding-bottom: 62px;
+//   text-align: center;
+//   color:#fff;
+//   font-size: 23px;
+//   background-color: @mainColor;
+//   p{
+//     line-height: 48px;
+//   }
+// }
+
+.footer-container {
+  padding: 35px 0;
+  background: #1f1814;
+  .foot-box{
+    .flex(space-between);
+    .left-layout{
+      .nav-list{
+        .nav-item{
+          color:#999;
+          font-size: 16px;
+          padding: 0 1em;
+          position: relative;
+          &::after{
+            content:"";
+            position: absolute;
+            height: 70%;
+            width: 1px;
+            background-color: #999;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+          &:last-child{
+            &::after{
+              display: none;
+            }
+          }
+        }
+      }
+      .cont{
+        margin-top: 24px;
+        color:#999;
+        line-height: 30px;
+        .beian{
+          color:#666;
+          font-size: 12px;
+          .flex(flex-start);
+          display: inline-flex;
+          a{
+            padding-left: 10px;
+            .flex(flex-start);
+            img{
+              margin-right: 3px;
+            }
+          }
+        }
+      }
+    }
+    .right-layout{
+      .qrcode-img{
+        .flex(flex-start);
+        img{
+          width: 100px;
+          height: 100px;
+          margin-right: 15px;
+        }
+        p{
+          width: 25px;
+          color:#666;
+        }
+      }
+    }
+  }
+}
+
+@import "./1380.less" screen and (max-width: 1380px);
+@import "./1080.less" screen and (max-width: 1080px);
+@import "./768.less" screen and (max-width: 768px);
